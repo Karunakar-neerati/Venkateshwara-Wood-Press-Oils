@@ -3,69 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkateshwara Wood Press Oils - Pure & Organic</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Venkateshwara Wood Press Oils</title>
+    <style>
+        :root {
+            --primary: #2c5e3b;
+            --accent: #d4a373;
+            --bg-light: #fefae0;
+            --text-dark: #2b2d42;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+        /* Navigation */
+        nav { background: var(--primary); color: white; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+        nav .logo { font-size: 1.25rem; font-weight: bold; }
+        nav ul { display: flex; list-style: none; gap: 1.5rem; }
+        nav a { color: white; text-decoration: none; cursor: pointer; font-weight: 500; }
+        nav a:hover { text-decoration: underline; }
+
+        /* Container Sections */
+        .page-section { display: none; padding: 3rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .page-section.active { display: block; }
+
+        /* Hero */
+        .hero { text-align: center; padding: 4rem 1rem; background: #e9edc9; border-radius: 8px; margin-bottom: 2rem; }
+        .hero h1 { color: var(--primary); margin-bottom: 0.5rem; }
+
+        /* Product Cards */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); padding: 1.5rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
+        .product-card h3 { margin: 1rem 0 0.5rem; color: var(--primary); }
+        .price { font-weight: bold; color: var(--primary); font-size: 1.1rem; margin: 0.5rem 0; }
+        
+        .quantity-control { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin: 1rem 0; }
+        .quantity-control input { width: 50px; text-align: center; padding: 0.25rem; }
+
+        /* Buttons */
+        .btn-wa { background-color: #25D366; color: white; border: none; padding: 0.75rem 1rem; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; width: 100%; }
+        .btn-wa:hover { background-color: #1ebc57; }
+
+        /* Footer */
+        footer { background: var(--primary); color: white; text-align: center; padding: 1.5rem; margin-top: 3rem; }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Venkateshwara Wood Press Oils</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <img src="images/shop.jpg" alt="Venkateshwara Wood Press Oils Shop" class="hero-image">
-            <div class="hero-content">
-                <h1>Welcome to Venkateshwara Wood Press Oils</h1>
-                <p>Pure, Organic, and Cold-Pressed Oils for Your Health</p>
-                <a href="products.html" class="btn">Shop Now</a>
-            </div>
-        </section>
+    <nav>
+        <div class="logo">Venkateshwara Oils</div>
+        <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('products')">Products</a></li>
+            <li><a onclick="showPage('process')">Our Process</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section class="featured-products">
-            <div class="container">
-                <h2>Our Featured Products</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <img src="images/groundnut-oil.jpg" alt="Groundnut Oil">
-                        <h3>Groundnut Oil</h3>
-                        <p>Rich in nutrients and perfect for cooking</p>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/sesame-oil.jpg" alt="Sesame Oil">
-                        <h3>Sesame Oil</h3>
-                        <p>Premium quality sesame oil for health</p>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/coconut-oil.jpg" alt="Coconut Oil">
-                        <h3>Coconut Oil</h3>
-                        <p>Pure coconut oil for cooking and wellness</p>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/sunflower-oil.jpg" alt="Sunflower Oil">
-                        <h3>Sunflower Oil</h3>
-                        <p>Light and healthy sunflower oil</p>
-                    </div>
+    <section id="home" class="page-section active">
+        <div class="hero">
+            <h1>Traditional Wood Pressed Oils</h1>
+            <p>100% Pure, Unrefined, & Chemically Free Cold Pressed Oils</p>
+        </div>
+        <h2>Why Choose Us?</h2>
+        <p>We extract oils using traditional wooden churners (Chekku/Ghani) at room temperature to preserve maximum nutrients, natural aroma, and flavor.</p>
+    </section>
+
+    <section id="products" class="page-section">
+        <h2>Our Pure Oil Selection</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNFMjJSeY-SVt9-PsYY1CIKCz_QuAsB2d9x-YNX0aygKOCwU4BIZV-Zw&s=10" alt="Groundnut Oil">
+                <h3>Wood Pressed Groundnut Oil</h3>
+                <p>Ideal for daily cooking and deep frying.</p>
+                <div class="price">₹320 / Liter</div>
+                <div class="quantity-control">
+                    <label>Qty (Ltrs):</label>
+                    <input type="number" id="qty-groundnut" value="1" min="1">
                 </div>
+                <button class="btn-wa" onclick="orderViaWhatsApp('Wood Pressed Groundnut Oil', 'qty-groundnut')">
+                    Order via WhatsApp
+                </button>
             </div>
-        </section>
-    </main>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNFMjJSeY-SVt9-PsYY1CIKCz_QuAsB2d9x-YNX0aygKOCwU4BIZV-Zw&s=10" alt="Sesame Oil">
+                <h3>Wood Pressed Sesame Oil</h3>
+                <p>Rich in anti-oxidants and natural aroma.</p>
+                <div class="price">₹420 / Liter</div>
+                <div class="quantity-control">
+                    <label>Qty (Ltrs):</label>
+                    <input type="number" id="qty-sesame" value="1" min="1">
+                </div>
+                <button class="btn-wa" onclick="orderViaWhatsApp('Wood Pressed Sesame Oil', 'qty-sesame')">
+                    Order via WhatsApp
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="process" class="page-section">
+        <h2>Traditional Extraction Process</h2>
+        <p>Our extraction avoids heat generation. By employing wooden churners operating at low RPMs, the nutritional integrity, antioxidants, and original taste remain fully intact.</p>
+    </section>
+
+    <section id="contact" class="page-section">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+        <p><strong>Address:</strong> Venkateshwara Wood Press Oils Unit, Main Road, Telangana.</p>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Venkateshwara Wood Press Oils. All rights reserved.</p>
-        </div>
+        <p>&copy; 2026 Venkateshwara Wood Press Oils. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Replace with your actual business WhatsApp number (with country code, no + or spaces)
+        const BUSINESS_PHONE_NUMBER = "919000000000"; 
+
+        // Simple Client-side Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        // Direct WhatsApp Checkout Script
+        function orderViaWhatsApp(productName, qtyInputId) {
+            const quantity = document.getElementById(qtyInputId).value;
+            const message = `Hello Venkateshwara Wood Press Oils, I would like to order:\n\n*Product:* ${productName}\n*Quantity:* ${quantity} Liter(s)\n\nPlease share the payment and delivery details.`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${BUSINESS_PHONE_NUMBER}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
