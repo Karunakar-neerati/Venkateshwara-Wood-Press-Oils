@@ -1,154 +1,1630 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkateshwara Wood Press Oils</title>
-    <style>
-        :root {
-            --primary: #2c5e3b;
-            --accent: #d4a373;
-            --bg-light: #fefae0;
-            --text-dark: #2b2d42;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b24">
+  <meta name="description" content="Venkateshwara Wood Press Oils — traditional wood pressed oils, natural millets and everyday goodness from Narkhuda, Shamshabad.">
+  <title>Venkateshwara Wood Press Oils | Pure by Tradition</title>
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
-        /* Navigation */
-        nav { background: var(--primary); color: white; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
-        nav .logo { font-size: 1.25rem; font-weight: bold; }
-        nav ul { display: flex; list-style: none; gap: 1.5rem; }
-        nav a { color: white; text-decoration: none; cursor: pointer; font-weight: 500; }
-        nav a:hover { text-decoration: underline; }
+<style>
+:root{
+  --forest:#123b24;
+  --forest-2:#1c5634;
+  --olive:#718b35;
+  --cream:#f7f2e7;
+  --paper:#fffdf7;
+  --ink:#17231b;
+  --muted:#687168;
+  --line:#ddd8c8;
+  --gold:#c58b38;
+  --brown:#5b321f;
+  --shadow:0 18px 50px rgba(18,59,36,.10);
+  --radius:24px;
+}
 
-        /* Container Sections */
-        .page-section { display: none; padding: 3rem 1.5rem; max-width: 1100px; margin: 0 auto; }
-        .page-section.active { display: block; }
+*{box-sizing:border-box}
 
-        /* Hero */
-        .hero { text-align: center; padding: 4rem 1rem; background: #e9edc9; border-radius: 8px; margin-bottom: 2rem; }
-        .hero h1 { color: var(--primary); margin-bottom: 0.5rem; }
+html{
+  scroll-behavior:smooth;
+}
 
-        /* Product Cards */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
-        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); padding: 1.5rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
-        .product-card h3 { margin: 1rem 0 0.5rem; color: var(--primary); }
-        .price { font-weight: bold; color: var(--primary); font-size: 1.1rem; margin: 0.5rem 0; }
-        
-        .quantity-control { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin: 1rem 0; }
-        .quantity-control input { width: 50px; text-align: center; padding: 0.25rem; }
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"DM Sans",system-ui,sans-serif;
+  line-height:1.6;
+}
 
-        /* Buttons */
-        .btn-wa { background-color: #25D366; color: white; border: none; padding: 0.75rem 1rem; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; width: 100%; }
-        .btn-wa:hover { background-color: #1ebc57; }
+img{
+  max-width:100%;
+  display:block;
+}
 
-        /* Footer */
-        footer { background: var(--primary); color: white; text-align: center; padding: 1.5rem; margin-top: 3rem; }
-    </style>
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1160px,calc(100% - 40px));
+  margin:auto;
+}
+
+/* HEADER */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(247,242,231,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(18,59,36,.08);
+}
+
+.nav{
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.brand{
+  width:250px;
+  display:block;
+}
+
+.brand img{
+  width:100%;
+  height:58px;
+  object-fit:contain;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.nav-links a{
+  opacity:.8;
+}
+
+.nav-links a:hover{
+  opacity:1;
+  color:var(--forest);
+}
+
+.nav-cta{
+  background:var(--forest);
+  color:white!important;
+  padding:12px 19px;
+  border-radius:999px;
+  opacity:1!important;
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  font-size:28px;
+  color:var(--forest);
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:75px 0 65px;
+  background:
+    radial-gradient(circle at 75% 25%,rgba(113,139,53,.13),transparent 30%),
+    linear-gradient(180deg,#fbf8ef 0%,#f3eee0 100%);
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:auto -5% -150px;
+  height:300px;
+  background:radial-gradient(ellipse,rgba(197,139,56,.12),transparent 65%);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.03fr .97fr;
+  align-items:center;
+  gap:55px;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.18em;
+  font-weight:800;
+  color:var(--olive);
+  display:inline-block;
+}
+
+.hero h1,
+.section h2,
+.why-copy h2,
+.cta-section h2{
+  font-family:"Playfair Display",Georgia,serif;
+  line-height:1.05;
+  letter-spacing:-.035em;
+}
+
+.hero h1{
+  font-size:clamp(50px,6vw,82px);
+  margin:16px 0 24px;
+  color:var(--forest);
+}
+
+.hero h1 em{
+  color:var(--brown);
+  font-style:normal;
+}
+
+.hero-text{
+  font-size:18px;
+  max-width:610px;
+  color:#59645b;
+  margin:0 0 30px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:15px 22px;
+  border-radius:999px;
+  font-weight:700;
+  border:1px solid transparent;
+  transition:.2s transform,.2s box-shadow;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(18,59,36,.13);
+}
+
+.btn-primary{
+  background:var(--forest);
+  color:white;
+}
+
+.btn-ghost{
+  border-color:var(--forest);
+  color:var(--forest);
+}
+
+.btn-light{
+  background:#f9f4e7;
+  color:var(--forest);
+}
+
+.trust-row{
+  display:flex;
+  gap:0;
+  margin-top:45px;
+  border-top:1px solid var(--line);
+  padding-top:22px;
+}
+
+.trust-row div{
+  padding-right:28px;
+  margin-right:28px;
+  border-right:1px solid var(--line);
+}
+
+.trust-row div:last-child{
+  border:0;
+  margin:0;
+}
+
+.trust-row strong{
+  display:block;
+  color:var(--forest);
+  font-size:17px;
+}
+
+.trust-row span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.hero-art{
+  position:relative;
+  min-height:540px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-image-frame{
+  width:min(430px,82%);
+  aspect-ratio:4/5;
+  border-radius:34px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:#c8bba1;
+  transform:rotate(2deg);
+  border:10px solid rgba(255,253,247,.75);
+}
+
+.hero-image-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.floating-note{
+  position:absolute;
+  background:rgba(255,253,247,.96);
+  box-shadow:0 12px 30px rgba(18,59,36,.13);
+  padding:13px 17px;
+  border-radius:14px;
+  font-size:13px;
+  font-weight:700;
+  color:var(--forest);
+}
+
+.floating-note span{
+  color:var(--gold);
+  margin-right:8px;
+}
+
+.note-top{
+  top:75px;
+  right:0;
+}
+
+.note-bottom{
+  bottom:70px;
+  left:0;
+}
+
+/* MARQUEE */
+
+.marquee{
+  overflow:hidden;
+  background:var(--forest);
+  color:#f6f1e4;
+  padding:14px 0;
+  white-space:nowrap;
+  font-size:11px;
+  letter-spacing:.22em;
+  font-weight:800;
+}
+
+.marquee div{
+  width:max-content;
+  animation:marquee 24s linear infinite;
+}
+
+.marquee span{
+  color:#b9cf75;
+  padding:0 15px;
+}
+
+@keyframes marquee{
+  to{
+    transform:translateX(-25%);
+  }
+}
+
+/* SECTIONS */
+
+.section{
+  padding:100px 0;
+}
+
+.products-section{
+  background:var(--paper);
+}
+
+.section-heading{
+  display:flex;
+  justify-content:space-between;
+  gap:50px;
+  align-items:end;
+  margin-bottom:40px;
+}
+
+.section-heading h2,
+.story-copy h2{
+  font-size:clamp(40px,5vw,62px);
+  margin:9px 0 0;
+  color:var(--forest);
+}
+
+.section-heading p{
+  max-width:430px;
+  color:var(--muted);
+  margin:0;
+}
+
+/* PRODUCTS */
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.product-card{
+  background:#f7f3e9;
+  border:1px solid #e4decd;
+  border-radius:22px;
+  overflow:hidden;
+  transition:.25s transform,.25s box-shadow;
+}
+
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+.product-image{
+  height:360px;
+  background:linear-gradient(145deg,#eee8d8,#ddd2b9);
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 58%;
+  transform:scale(1.06);
+}
+
+.product-info{
+  padding:22px 22px 24px;
+}
+
+.tag{
+  font-size:10px;
+  letter-spacing:.13em;
+  font-weight:800;
+  color:var(--olive);
+}
+
+.product-info h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:29px;
+  line-height:1.1;
+  margin:7px 0;
+}
+
+.product-info p{
+  color:var(--muted);
+  font-size:14px;
+  min-height:45px;
+  margin:0 0 18px;
+}
+
+.product-bottom{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+
+.product-bottom strong{
+  font-size:26px;
+  color:var(--brown);
+}
+
+.product-bottom span{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.order-link{
+  display:block;
+  margin-top:15px;
+  color:var(--forest);
+  font-size:13px;
+  font-weight:800;
+}
+
+/* WHY US */
+
+.why-section{
+  padding:100px 0;
+  background:var(--forest);
+  color:white;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:90px;
+  align-items:start;
+}
+
+.why-copy .eyebrow{
+  color:#b9cf75;
+}
+
+.why-copy h2{
+  font-size:clamp(40px,5vw,62px);
+  margin:10px 0 22px;
+  color:#f8f3e8;
+}
+
+.why-copy p{
+  color:#c9d3ca;
+  max-width:520px;
+}
+
+.text-link{
+  display:inline-block;
+  margin-top:18px;
+  font-weight:800;
+  color:#f7dfae;
+}
+
+.benefit-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.benefit{
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:20px;
+  padding:24px;
+  display:flex;
+  gap:16px;
+  min-height:170px;
+}
+
+.benefit-icon{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.4);
+  display:grid;
+  place-items:center;
+  flex:0 0 44px;
+  color:#c8d98d;
+  font-size:20px;
+}
+
+.benefit h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:21px;
+  line-height:1.15;
+  margin:0 0 7px;
+}
+
+.benefit p{
+  margin:0;
+  color:#b8c4ba;
+  font-size:13px;
+}
+
+/* MILLETS */
+
+.millet-section{
+  background:#f0eadb;
+}
+
+.millet-card{
+  background:#2c5a36;
+  border-radius:30px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  min-height:530px;
+  box-shadow:var(--shadow);
+}
+
+.millet-copy{
+  padding:65px;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.millet-copy .eyebrow{
+  color:#c7da8b;
+}
+
+.millet-copy h2{
+  font-size:58px;
+  margin:9px 0 16px;
+}
+
+.millet-copy p{
+  color:#d2ddd3;
+  max-width:420px;
+}
+
+.millet-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:18px 0 28px;
+}
+
+.millet-chips span{
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:12px;
+}
+
+.millet-image{
+  min-height:530px;
+}
+
+.millet-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* STORY */
+
+.story-section{
+  background:var(--paper);
+}
+
+.story-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:75px;
+  align-items:center;
+}
+
+.story-art{
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:#ddd;
+}
+
+.story-art img{
+  width:100%;
+  height:auto;
+}
+
+.story-copy h2{
+  font-size:clamp(38px,4.5vw,58px);
+}
+
+.story-copy p{
+  color:var(--muted);
+  font-size:16px;
+}
+
+.signature{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:26px;
+  color:var(--brown);
+  margin-top:28px;
+}
+
+.signature span{
+  color:var(--olive);
+}
+
+/* CTA */
+
+.cta-section{
+  background:var(--brown);
+  color:white;
+  padding:65px 0;
+}
+
+.cta-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:35px;
+}
+
+.cta-section .eyebrow{
+  color:#f0d7a3;
+}
+
+.cta-section h2{
+  font-size:clamp(38px,5vw,56px);
+  margin:8px 0 0;
+}
+
+/* FOOTER */
+
+.footer{
+  background:#0c2a19;
+  color:#dbe4dc;
+  padding:55px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.1fr;
+  gap:35px;
+}
+
+.footer-brand img{
+  width:260px;
+  height:70px;
+  object-fit:contain;
+  object-position:left center;
+  filter:brightness(0) invert(1);
+  opacity:.9;
+}
+
+.footer-brand p{
+  color:#9eb0a2;
+  font-size:13px;
+}
+
+.footer-label{
+  font-size:10px;
+  letter-spacing:.16em;
+  color:#9fb66a;
+  font-weight:800;
+}
+
+.footer p{
+  font-size:13px;
+  color:#b9c7bc;
+}
+
+.footer a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  margin-top:45px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  justify-content:space-between;
+  color:#84968a;
+  font-size:11px;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+  .nav-links{
+    gap:15px;
+  }
+
+  .brand{
+    width:210px;
+  }
+
+  .hero-grid,
+  .why-grid,
+  .story-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-copy{
+    order:1;
+  }
+
+  .hero-art{
+    order:2;
+    min-height:470px;
+  }
+
+  .why-grid{
+    gap:45px;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .millet-card{
+    grid-template-columns:1fr;
+  }
+
+  .millet-image{
+    min-height:420px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:680px){
+
+  .container{
+    width:min(100% - 28px,1160px);
+  }
+
+  .nav{
+    height:72px;
+  }
+
+  .brand{
+    width:190px;
+  }
+
+  .brand img{
+    height:50px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;
+    right:0;
+    background:var(--paper);
+    padding:18px 20px 25px;
+    flex-direction:column;
+    align-items:stretch;
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 4px;
+  }
+
+  .nav-cta{
+    text-align:center;
+  }
+
+  .hero{
+    padding:55px 0 45px;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .hero-text{
+    font-size:16px;
+  }
+
+  .hero-art{
+    min-height:420px;
+  }
+
+  .hero-image-frame{
+    width:78%;
+  }
+
+  .floating-note{
+    font-size:11px;
+  }
+
+  .note-top{
+    top:30px;
+  }
+
+  .note-bottom{
+    bottom:35px;
+  }
+
+  .trust-row{
+    gap:12px;
+  }
+
+  .trust-row div{
+    padding-right:12px;
+    margin-right:0;
+  }
+
+  .trust-row strong{
+    font-size:14px;
+  }
+
+  .trust-row span{
+    font-size:10px;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .section-heading{
+    display:block;
+  }
+
+  .section-heading p{
+    margin-top:16px;
+  }
+
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-image{
+    height:390px;
+  }
+
+  .benefit-list{
+    grid-template-columns:1fr;
+  }
+
+  .benefit{
+    min-height:auto;
+  }
+
+  .millet-copy{
+    padding:42px 28px;
+  }
+
+  .millet-copy h2{
+    font-size:46px;
+  }
+
+  .millet-image{
+    min-height:330px;
+  }
+
+  .story-grid{
+    gap:40px;
+  }
+
+  .cta-inner{
+    display:block;
+  }
+
+  .cta-inner .btn{
+    margin-top:24px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .footer-bottom{
+    display:block;
+  }
+
+  .footer-bottom span{
+    display:block;
+    margin-top:8px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">Venkateshwara Oils</div>
-        <ul>
-            <li><a onclick="showPage('home')">Home</a></li>
-            <li><a onclick="showPage('products')">Products</a></li>
-            <li><a onclick="showPage('process')">Our Process</a></li>
-            <li><a onclick="showPage('contact')">Contact</a></li>
-        </ul>
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="#top">
+      <img
+        src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/logo.png"
+        alt="Venkateshwara Wood Press Oils">
+    </a>
+
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#oils">Oils</a>
+      <a href="#why-us">Why us</a>
+      <a href="#millets">Millets</a>
+      <a href="#story">Our story</a>
+      <a href="#contact" class="nav-cta">Order now</a>
     </nav>
 
-    <!-- HOME PAGE -->
-    <section id="home" class="page-section active">
-        <div class="hero">
-            <h1>Traditional Wood Pressed Oils</h1>
-            <p>100% Pure, Unrefined, & Chemically Free Cold Pressed Oils</p>
+  </div>
+</header>
+
+
+<main id="top">
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+
+      <span class="eyebrow">
+        TRADITION • NATURE • EVERYDAY GOODNESS
+      </span>
+
+      <h1>
+        Pure by tradition.<br>
+        <em>Made for today.</em>
+      </h1>
+
+      <p class="hero-text">
+        Wood pressed oils and wholesome grains crafted around a simple idea:
+        keep the goodness close to nature and the taste close to home.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn btn-primary" href="#oils">
+          Explore our oils ↗
+        </a>
+
+        <a
+          class="btn btn-ghost"
+          href="https://wa.me/919912284121?text=Hi%20Venkateshwara%20Wood%20Press%20Oils%2C%20I%20would%20like%20to%20place%20an%20order."
+          target="_blank"
+          rel="noopener">
+          WhatsApp us
+        </a>
+
+      </div>
+
+      <div class="trust-row">
+
+        <div>
+          <strong>100%</strong>
+          <span>Natural focus</span>
         </div>
-        <h2>Why Choose Us?</h2>
-        <p>We extract oils using traditional wooden churners (Chekku/Ghani) at room temperature to preserve maximum nutrients, natural aroma, and flavor.</p>
-    </section>
 
-    <!-- PRODUCTS PAGE -->
-    <section id="products" class="page-section">
-        <h2>Our Pure Oil Selection</h2>
-        <div class="product-grid">
+        <div>
+          <strong>500 ml</strong>
+          <span>Everyday bottle</span>
+        </div>
 
-            <!-- Card 1 -->
-            <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNFMjJSeY-SVt9-PsYY1CIKCz_QuAsB2d9x-YNX0aygKOCwU4BIZV-Zw&s=10" alt="Groundnut Oil">
-                <h3>Wood Pressed Groundnut Oil</h3>
-                <p>Ideal for daily cooking and deep frying.</p>
-                <div class="price">₹320 / Liter</div>
-                <div class="quantity-control">
-                    <label>Qty (Ltrs):</label>
-                    <input type="number" id="qty-groundnut" value="1" min="1">
-                </div>
-                <button class="btn-wa" onclick="orderViaWhatsApp('Wood Pressed Groundnut Oil', 'qty-groundnut')">
-                    Order via WhatsApp
-                </button>
-            </div>
+        <div>
+          <strong>Wood pressed</strong>
+          <span>Traditional process</span>
+        </div>
 
-            <!-- Card 2 -->
-            <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNFMjJSeY-SVt9-PsYY1CIKCz_QuAsB2d9x-YNX0aygKOCwU4BIZV-Zw&s=10" alt="Sesame Oil">
-                <h3>Wood Pressed Sesame Oil</h3>
-                <p>Rich in anti-oxidants and natural aroma.</p>
-                <div class="price">₹420 / Liter</div>
-                <div class="quantity-control">
-                    <label>Qty (Ltrs):</label>
-                    <input type="number" id="qty-sesame" value="1" min="1">
-                </div>
-                <button class="btn-wa" onclick="orderViaWhatsApp('Wood Pressed Sesame Oil', 'qty-sesame')">
-                    Order via WhatsApp
-                </button>
-            </div>
+      </div>
+
+    </div>
+
+
+    <div class="hero-art">
+
+      <div class="hero-image-frame">
+
+        <img
+          src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/black-sesame.jpg"
+          alt="Venkateshwara Wood Pressed Black Sesame Oil">
+
+      </div>
+
+      <div class="floating-note note-top">
+        <span>01</span>
+        Tradition in every pour
+      </div>
+
+      <div class="floating-note note-bottom">
+        <span>02</span>
+        From nature to your home
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="marquee">
+  <div>
+    WOOD PRESSED
+    <span>•</span>
+    UNREFINED
+    <span>•</span>
+    NATURAL
+    <span>•</span>
+    EVERYDAY COOKING
+    <span>•</span>
+    WOOD PRESSED
+    <span>•</span>
+    UNREFINED
+    <span>•</span>
+    NATURAL
+  </div>
+</div>
+
+
+<section id="oils" class="section products-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+        <span class="eyebrow">THE COLLECTION</span>
+        <h2>Our natural oils</h2>
+      </div>
+
+      <p>
+        Six familiar favourites, presented in the same bottles and labels
+        used by Venkateshwara.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+          <img
+            src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/groundnut.jpg"
+            alt="Groundnut Oil bottle">
+        </div>
+
+        <div class="product-info">
+
+          <span class="tag">EVERYDAY FAVOURITE</span>
+
+          <h3>Groundnut Oil</h3>
+
+          <p>
+            Warm, familiar flavour for everyday cooking.
+          </p>
+
+          <div class="product-bottom">
+            <strong>₹200</strong>
+            <span>500 ml</span>
+          </div>
+
+          <a
+            class="order-link"
+            href="https://wa.me/919912284121?text=Hi%2C%20I%20want%20to%20order%20500ml%20Groundnut%20Oil%20for%20Rs%20200."
+            target="_blank">
+            Order on WhatsApp →
+          </a>
 
         </div>
-    </section>
 
-    <!-- PROCESS PAGE -->
-    <section id="process" class="page-section">
-        <h2>Traditional Extraction Process</h2>
-        <p>Our extraction avoids heat generation. By employing wooden churners operating at low RPMs, the nutritional integrity, antioxidants, and original taste remain fully intact.</p>
-    </section>
+      </article>
 
-    <!-- CONTACT PAGE -->
-    <section id="contact" class="page-section">
-        <h2>Contact Us</h2>
-        <p><strong>Phone:</strong> +91 99122 84121</p>
-        <p><strong>WhatsApp:</strong> +91 99122 84121</p>
-        <p><strong>Address:</strong> Venkateshwara Wood Press Oils, Beside Shivalayam, Narkhuda, Shamshabad Telangana.</p>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 Venkateshwara Wood Press Oils. All Rights Reserved.</p>
-    </footer>
+      <article class="product-card">
 
-    <script>
-        // Updated with your business WhatsApp phone number
-        const BUSINESS_PHONE_NUMBER = "919912284121"; 
+        <div class="product-image">
+          <img
+            src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/safflower.jpg"
+            alt="Safflower Oil bottle">
+        </div>
 
-        // Simple Client-side Navigation
-        function showPage(pageId) {
-            document.querySelectorAll('.page-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(pageId).classList.add('active');
-            window.scrollTo(0, 0);
-        }
+        <div class="product-info">
 
-        // Direct WhatsApp Checkout Script
-        function orderViaWhatsApp(productName, qtyInputId) {
-            const quantity = document.getElementById(qtyInputId).value;
-            const message = `Hello Venkateshwara Wood Press Oils, I would like to order:\n\n*Product:* ${productName}\n*Quantity:* ${quantity} Liter(s)\n\nPlease share the payment and delivery details.`;
-            
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/${BUSINESS_PHONE_NUMBER}?text=${encodedMessage}`;
-            
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
+          <span class="tag">LIGHT & VERSATILE</span>
+
+          <h3>Safflower Oil</h3>
+
+          <p>
+            A light everyday oil with a clean finish.
+          </p>
+
+          <div class="product-bottom">
+            <strong>₹250</strong>
+            <span>500 ml</span>
+          </div>
+
+          <a
+            class="order-link"
+            href="https://wa.me/919912284121?text=Hi%2C%20I%20want%20to%20order%20500ml%20Safflower%20Oil%20for%20Rs%20250."
+            target="_blank">
+            Order on WhatsApp →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+          <img
+            src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/sunflower.jpg"
+            alt="Sunflower Oil bottle">
+        </div>
+
+        <div class="product-info">
+
+          <span class="tag">LIGHT & NUTRITIOUS</span>
+
+          <h3>Sunflower Oil</h3>
+
+          <p>
+            Bright, light and easy to bring into daily meals.
+          </p>
+
+          <div class="product-bottom">
+            <strong>₹200</strong>
+            <span>500 ml</span>
+          </div>
+
+          <a
+            class="order-link"
+            href="https://wa.me/919912284121?text=Hi%2C%20I%20want%20to%20order%20500ml%20Sunflower%20Oil%20for%20Rs%20200."
+            target="_blank">
+            Order on WhatsApp →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+          <img
+            src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/sesame.jpg"
+            alt="Sesame Oil bottle">
+        </div>
+
+        <div class="product-info">
+
+          <span class="tag">TRADITIONAL PICK</span>
+
+          <h3>Sesame Oil</h3>
+
+          <p>
+            Deep traditional character for recipes that matter.
+          </p>
+
+          <div class="product-bottom">
+            <strong>₹400</strong>
+            <span>500 ml</span>
+          </div>
+
+          <a
+            class="order-link"
+            href="https://wa.me/919912284121?text=Hi%2C%20I%20want%20to%20order%20500ml%20Sesame%20Oil%20for%20Rs%20400."
+            target="_blank">
+            Order on WhatsApp →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+          <img
+            src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/coconut.jpg"
+            alt="Coconut Oil bottle">
+        </div>
+
+        <div class="product-info">
+
+          <span class="tag">PURE FRESHNESS</span>
+
+          <h3>Coconut Oil</h3>
+
+          <p>
+            A clean, familiar choice for a naturally minded kitchen.
+          </p>
+
+          <div class="product-bottom">
+            <strong>₹450</strong>
+            <span>500 ml</span>
+          </div>
+
+          <a
+            class="order-link"
+            href="https://wa.me/919912284121?text=Hi%2C%20I%20want%20to%20order%20500ml%20Coconut%20Oil%20for%20Rs%20450."
+            target="_blank">
+            Order on WhatsApp →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+          <img
+            src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/black-sesame.jpg"
+            alt="Black Sesame Oil bottle">
+        </div>
+
+        <div class="product-info">
+
+          <span class="tag">RICH & DISTINCTIVE</span>
+
+          <h3>Black Sesame Oil</h3>
+
+          <p>
+            Bold sesame character with a distinctive, rich finish.
+          </p>
+
+          <div class="product-bottom">
+            <strong>₹400</strong>
+            <span>500 ml</span>
+          </div>
+
+          <a
+            class="order-link"
+            href="https://wa.me/919912284121?text=Hi%2C%20I%20want%20to%20order%20500ml%20Black%20Sesame%20Oil%20for%20Rs%20400."
+            target="_blank">
+            Order on WhatsApp →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="why-us" class="why-section">
+
+  <div class="container why-grid">
+
+    <div class="why-copy">
+
+      <span class="eyebrow">WHY VENKATESHWARA</span>
+
+      <h2>
+        The old way still has a place at the table.
+      </h2>
+
+      <p>
+        Traditional wood pressing, natural ingredients and food made
+        for generations — brought together in a clean, modern experience.
+      </p>
+
+      <a class="text-link" href="#story">
+        Read our story →
+      </a>
+
+    </div>
+
+
+    <div class="benefit-list">
+
+      <div class="benefit">
+
+        <span class="benefit-icon">◒</span>
+
+        <div>
+          <h3>Traditional wood pressed</h3>
+          <p>
+            Inspired by the familiar chekku and wood-press tradition.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <span class="benefit-icon">♡</span>
+
+        <div>
+          <h3>No preservatives. No unnecessary fuss.</h3>
+          <p>
+            A simple product story focused on natural everyday goodness.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <span class="benefit-icon">❋</span>
+
+        <div>
+          <h3>Made for your family</h3>
+          <p>
+            Products designed around the food you cook every day.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <span class="benefit-icon">⌖</span>
+
+        <div>
+          <h3>Local at heart</h3>
+          <p>
+            Narkhuda, Shamshabad — close to home and community.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="millets" class="section millet-section">
+
+  <div class="container">
+
+    <div class="millet-card">
+
+      <div class="millet-copy">
+
+        <span class="eyebrow">
+          ANCIENT GRAINS • MODERN HEALTH
+        </span>
+
+        <h2>Meet our millets.</h2>
+
+        <p>
+          Alongside our oils, Venkateshwara brings a wholesome range
+          of traditional grains to the table.
+        </p>
+
+        <div class="millet-chips">
+          <span>Foxtail</span>
+          <span>Kodo</span>
+          <span>Little</span>
+          <span>Browntop</span>
+          <span>Barnyard</span>
+        </div>
+
+        <a
+          class="btn btn-light"
+          href="https://wa.me/919912284121?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20millets."
+          target="_blank">
+          Ask about millets →
+        </a>
+
+      </div>
+
+
+      <div class="millet-image">
+
+        <img
+          src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/all-millets.jpg"
+          alt="Venkateshwara millets collection">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="story" class="section story-section">
+
+  <div class="container story-grid">
+
+    <div class="story-art">
+
+      <img
+        src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/all-oils.png"
+        alt="Venkateshwara Wood Press Oils">
+
+    </div>
+
+
+    <div class="story-copy">
+
+      <span class="eyebrow">
+        FROM NATURE TO YOUR HOME
+      </span>
+
+      <h2>
+        Choose pure. Choose traditional. Choose Venkateshwara.
+      </h2>
+
+      <p>
+        Traditional wood pressing, natural oils, wholesome grains
+        and a promise to keep good food at the centre of everyday life.
+      </p>
+
+      <div class="signature">
+        Venkateshwara <span>✦</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta-section">
+
+  <div class="container cta-inner">
+
+    <div>
+
+      <span class="eyebrow">
+        READY FOR YOUR NEXT BOTTLE?
+      </span>
+
+      <h2>
+        Bring tradition home.
+      </h2>
+
+    </div>
+
+    <a
+      class="btn btn-light"
+      href="https://wa.me/919912284121?text=Hi%20Venkateshwara%20Wood%20Press%20Oils%2C%20I%20would%20like%20to%20place%20an%20order."
+      target="_blank">
+      Start an order on WhatsApp ↗
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer id="contact" class="footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <img
+        src="https://karunakar-neerati.github.io/Venkateshwara-Wood-Press-Oils/assets/logo.png"
+        alt="Venkateshwara Wood Press Oils">
+
+      <p>
+        Pure by Tradition · Healthy for Generations
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <span class="footer-label">VISIT</span>
+
+      <p>
+        Narkhuda, Shamshabad
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <span class="footer-label">CALL / WHATSAPP</span>
+
+      <p>
+        <a href="tel:+919912284121">9912284121</a><br>
+        <a href="tel:+918096207017">8096207017</a>
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <span class="footer-label">PRODUCTS</span>
+
+      <p>
+        Natural Oils · Millets · Spices
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="year"></span> Venkateshwara Wood Press Oils
+    </span>
+
+    <span>
+      Good Food. Brighter Tomorrow.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+if(menuBtn){
+
+  menuBtn.addEventListener("click", () => {
+
+    const open = navLinks.classList.toggle("open");
+
+    menuBtn.setAttribute(
+      "aria-expanded",
+      String(open)
+    );
+
+    menuBtn.textContent = open ? "×" : "☰";
+
+  });
+
+}
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    navLinks.classList.remove("open");
+
+    menuBtn?.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    if(menuBtn){
+      menuBtn.textContent = "☰";
+    }
+
+  });
+
+});
+
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
 </body>
 </html>
